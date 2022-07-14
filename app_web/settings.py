@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-n(^u894_bdyzfe#0t(hv4y($udg@3#2o8tsk*c+#1a&fh-@p@l
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'app-playstate.herokuapp.com'
+    'app-playstate.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
@@ -41,7 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'crud',  
+    'api',
+    'rest_framework',
+    'crud',
+      
 ]
 
 MIDDLEWARE = [

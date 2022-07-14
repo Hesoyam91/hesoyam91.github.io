@@ -1,8 +1,30 @@
 {% extends 'core/base.html' %}
 
+{% load static %}
+
 {% block title %}Home{% endblock %}
 
 {% block primary_content %}
-    <h2>Mi Web Personal</h2>
-    <p>Bienvenidos.</p>
+<div class="container container p-5 my-5 border">
+    <div class="row">
+      <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    </div>    
+    <div class="card ml-3 text-center bg-transparent border-0 d-flex col-md-3">
+      <img class="card-img-top rounded-circle" style="width: 300px; height: 300px;" src="{% static 'core/img/foto_gervasio.jpeg' %}" alt="Gervasio">
+      <div class="card-body">
+        <h4 class="card-title" style="color:white">Gervasio Herrera</h4>
+        <p class="card-text" style="color:white">Estudiante de tercer semestre de Ingenieria Informatica en Duoc UC.</p>
+        <a href="https://github.com/Hesoyam91" class="btn btn-warning">Ver Perfil</a>
+      </div>
+    </div>
+    <div class="card ml-5 text-center bg-transparent border-0 d-flex col-md-3 ">
+      <img class="card-img-top rounded-circle" style="width: 300px; height: 300px;" src="{% static 'core/img/maxi.jpg' %}" alt="Maximiliano">
+      <div class="card-body">
+        <h4 class="card-title" style="color:white">Maximiliano Fuentes</h4>
+        <p class="card-text" style="color:white">Estudiante de tercer semestre de Ingenieria Informatica en Duoc UC.</p>
+        <a href="https://github.com/MaxFuentes28" class="btn btn-warning">Ver Perfil</a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

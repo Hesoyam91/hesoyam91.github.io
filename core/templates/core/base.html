@@ -24,43 +24,25 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="c">Figuras</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'figuras' %}">Figuras</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Accesorios</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'accesorios' %}">Accesorios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'contacto' %}">Nosotros</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Juegos
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" style= "color: blue;" href="{% url 'ps4' %}">PlayStation</a></li>
-                    <li><a class="dropdown-item" style= "color: rgb(255, 0, 0);" href="#">Nintendo</a></li>
-                    <li><a class="dropdown-item" style= "color: rgb(7, 124, 22);">Xbox</a></li>
+                    <li><a class="dropdown-item" style= "color: blue;" href="{% url 'playstation' %}">PlayStation</a></li>
+                    <li><a class="dropdown-item" style= "color: rgb(255, 0, 0);" href="{% url 'nintendo' %}">Nintendo</a></li>
+                    <li><a class="dropdown-item" style= "color: rgb(7, 124, 22);" href="{% url 'microsoft' %}">Xbox</a></li>
               </li>
             </ul>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Consolas
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" style= "color: blue;"href="#">PlayStation</a></li>
-                    <li><a class="dropdown-item" style= "color: rgb(255, 0, 0);" href="#">Nitendo</a></li>
-                    <li><a class="dropdown-item" style= "color: rgb(7, 124, 22);" href="#">Xbox</a></li>
-              </li>  
           </div>
-          <div class="container-fluid">
-            <div class="row" id="map_section">
-                <div class="col-6 mx-auto">
-                  <nav class="navbar navbar-white bg-white">
-                    <form class="form-inline">
-                      <input class="form-control" type="search" placeholder="Busca tus productos" aria-label="Search">
-                      <button class="btn btn-outline-danger" type="submit">Search</button>
-                    </form>
-                  </nav>
-                </div>
-                </div>
-            </div>
         </div>
           <div class="pe-0" id="login">
             <a class="nav-link active" aria-current="page" href="{% url 'login' %}">

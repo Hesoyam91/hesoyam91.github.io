@@ -2,11 +2,11 @@
 
 {% load static %}
 
-{% block title %}Productos{% endblock %}
+{% block title %}Microsoft{% endblock %}
 
 {% block primary_content %}
 <div class="container bg-dark text-center text-white py-5 mt-4">
-    <h1>Sección Productos</h1>
+    <h1>Microsoft</h1>
 </div>
 {% endblock %}
 
@@ -24,7 +24,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{p.marca}}</h5>
                     <p class="card-text">{{p.descripcion}}</p>
-                    <p class="card-text">{{p.precio}}</p>
+                    <p class="card-text">${{p.precio}}</p>
                     <p class="card-text">Unidades en stock: {{p.stock}}</p>
                 </div>
                 <div class="card-footer">
