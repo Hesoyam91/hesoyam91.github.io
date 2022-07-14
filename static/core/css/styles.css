@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	
+}
+
+
+
+.img-logo {
+	
+    display:inline-block;
+    width: 500px;
+    height: 200px;
+  }
+
+
+.reloj {
+	display:inline-block;
+	color:#000000;
+
+}
+
+.fecha{
+	float: right;
+	color: #000000;
+	
+
+}
+
+
+.nav-item{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.nosotros {
+	padding-bottom: 75px;
+	padding-top: 75px;
+}
+
+.nosotros img{
+	width: 300px;
+}
+
+.nosotros .presentacion{
+	text-align: right;
+	color: #000000;
+}
+
+.form-group{
+	padding-bottom: 25px;
+	padding-inline: 30px;
+	
+	
+}
+
+
+
+#map {
+    height: 100%;
+    }
+ 
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+
+
+#login{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1{
+    display: inline-block;
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1::after,h1::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color:currentColor;
+    top: 0.6em;
+
+}
+
+h1::before{
+    left: -140px;
+}
+
+h1::after{
+    right: -140px;
+}
+
