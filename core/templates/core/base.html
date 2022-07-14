@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <script src="https://kit.fontawesome.com/98e1ab6837.js" crossorigin="anonymous"></script>
+    <script src="{% static 'core/js/geolocalizacion.js' %"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="icon" href="{% static 'core/img/logo_mini.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>{% block title %}{% endblock %} | PlayState</title>
 </head>
@@ -120,16 +121,22 @@
             Secciones
           </h6>
           <p>
-            <a href="nosotros.html" class="text-light">Productos</a>
+            <a href="{% url 'contacto' %}" class="text-light">Nosotros</a>
           </p>
           <p>
-            <a href="contacto.html" class="text-light">Contactanos</a>
+            <a href="{% url 'figuras' %}" class="text-light">Figuras</a>
           </p>
           <p>
-            <a href="servicios.html" class="text-light">Servicios</a>
+            <a href="{% url 'accesorios' %}" class="text-light">Accesorios</a>
           </p>
           <p>
-            <a href="animales.html" class="text-light">Yugioh</a>
+            <a href="{% url 'playstation' %}" class="text-light">PlayStation</a>
+          </p>
+          <p>
+            <a href="{% url 'nintendo' %}" class="text-light">Nintendo</a>
+          </p>
+          <p>
+            <a href="{% url 'microsoft' %}" class="text-light">Xbox</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -169,11 +176,7 @@
 
 
 
-    <script src="assets/javascript/mapa.js"></script>
-    <script src ="assets/javascript/validacion.js"></script>
-    <script src="assets/javascript/geolocalizacion.js"></script>
-    <script src ="assets/javascript/modo-oscuro.js"></script>
-    <script src="assets/javascript/fecha.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
