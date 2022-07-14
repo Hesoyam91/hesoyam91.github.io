@@ -97,3 +97,17 @@ h1::after{
     right: -140px;
 }
 
+.announcement {
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    background: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    font-size: 0.15em;
+  }
+  
+  
