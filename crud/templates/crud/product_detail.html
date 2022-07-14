@@ -1,0 +1,43 @@
+{% extends 'crud/base.html' %}
+
+{% load static %}
+
+{% block title %}{{producto.idProducto}}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row mb-3">
+        <h1>Producto: {{producto.idProducto}}</h1>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            {% if producto.imagen %}
+            <img class="img-thumbnail" src="{{producto.imagen.url}}" alt="{{producto.idProducto}}">
+            {% else %}
+                <img class="img-thumbnail" src="{% static 'crud/img/image-not-found.png' %}" alt="{{producto.idProducto}}">
+            {% endif %}
+        </div>
+        <div class="col-md-8 ps-5">
+            <ul class="list-unstyled">
+                <li class="mb-2">Descripción: <p class="fw-bold">{{producto.descripcion}}</p></li>
+                <li class="mb-2">Marca: <p class="fw-bold">{{producto.marca}}</p></li>
+                <li class="mb-2">Precio: <p class="fw-bold">{{producto.precio}}</p></li>
+                <li class="mb-2">Stock: <p class="fw-bold">{{producto.stock}}</p></li>                
+            </ul>
+            <div class="row col-4">
+                <div class="btn-group" role="group">
+                    <a class="btn btn-outline-warning" href="/crud/{{producto.idProducto}}/update">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <a class="btn btn-outline-danger" href="/crud/{{producto.idProducto}}/delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <a class="btn btn-outline-primary" href="{% url 'product-list' %}">
+                        <i class="fa-solid fa-backward"></i>                
+                    </a>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+{% endblock %}

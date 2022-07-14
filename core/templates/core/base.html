@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <script src="https://kit.fontawesome.com/98e1ab6837.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="{% static 'core/img/logo_mini.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>{% block title %}{% endblock %} | PlayState</title>
+</head>
+<body style="background-color: rgb(167, 14, 14);">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <img class="img-logo" src="{% static 'core/img/logo.png' %}" alt="Logo-Empresa">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="c">Figuras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Accesorios</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Juegos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" style= "color: blue;" href="{% url 'ps4' %}">PlayStation</a></li>
+                    <li><a class="dropdown-item" style= "color: rgb(255, 0, 0);" href="#">Nintendo</a></li>
+                    <li><a class="dropdown-item" style= "color: rgb(7, 124, 22);">Xbox</a></li>
+              </li>
+            </ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Consolas
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" style= "color: blue;"href="#">PlayStation</a></li>
+                    <li><a class="dropdown-item" style= "color: rgb(255, 0, 0);" href="#">Nitendo</a></li>
+                    <li><a class="dropdown-item" style= "color: rgb(7, 124, 22);" href="#">Xbox</a></li>
+              </li>  
+          </div>
+          <div class="container-fluid">
+            <div class="row" id="map_section">
+                <div class="col-6 mx-auto">
+                  <nav class="navbar navbar-white bg-white">
+                    <form class="form-inline">
+                      <input class="form-control" type="search" placeholder="Busca tus productos" aria-label="Search">
+                      <button class="btn btn-outline-danger" type="submit">Search</button>
+                    </form>
+                  </nav>
+                </div>
+                </div>
+            </div>
+        </div>
+          <div class="pe-0" id="login">
+            <a class="nav-link active" aria-current="page" href="{% url 'login' %}">
+                <img class="img-logo" style="width: 50px; height: 50px;"src="{% static 'core/img/login.png' %}" alt="Login_icono">
+                <p>Iniciar Sesión</p>
+            </a>
+          </div>
+        </div>
+      </nav>
+ <!-- Bloques de contenido -->
+    <!-- Bloque principal -->
+    {% block primary_content %}{% endblock %}
+
+    <!-- Bloque secundario -->
+    {% block secondary_content %}{% endblock %}
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block text-light">
+      <span>Siguenos en redes sociales:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="https://www.facebook.com" class="me-4 text-light">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.twitter.com" class="me-4 text-light">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com" class="me-4 text-light">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">        
+          <div id ="map"> </div> 
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+          <script>
+            
+              var map;
+             function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: -33.49982, lng: -70.61629},
+                  zoom: 13,
+                });
+                var marker = new google.maps.Marker({
+                  position: {lat: -33.49982, lng: -70.61629},
+                  map: map,
+            
+                });
+             }
+          </script>
+        
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 text-light">
+            Secciones
+          </h6>
+          <p>
+            <a href="nosotros.html" class="text-light">Productos</a>
+          </p>
+          <p>
+            <a href="contacto.html" class="text-light">Contactanos</a>
+          </p>
+          <p>
+            <a href="servicios.html" class="text-light">Servicios</a>
+          </p>
+          <p>
+            <a href="animales.html" class="text-light">Yugioh</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 text-light">
+            Contacto
+          </h6>
+          <p class="text-light"><i class="fas fa-home me-3 text-light"></i> Calle Nueva York 29, Santiago</p>
+          <p class="text-light">
+            <i class="fas fa-envelope me-3 text-light"></i>
+            playstate@contacto.cl
+          </p>
+          <p class="text-light"><i class="fas fa-phone me-3 text-light"></i> + 569 9152 3547</p>
+          <p class="text-light"><i class="fas fa-print me-3 text-light"></i> + 2 2225 2247</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4 text-light" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 PlayState - Todos los derechos reservados.
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+
+
+
+
+
+    <script src="assets/javascript/mapa.js"></script>
+    <script src ="assets/javascript/validacion.js"></script>
+    <script src="assets/javascript/geolocalizacion.js"></script>
+    <script src ="assets/javascript/modo-oscuro.js"></script>
+    <script src="assets/javascript/fecha.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

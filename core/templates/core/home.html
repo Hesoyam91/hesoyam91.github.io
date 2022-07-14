@@ -1,0 +1,138 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block primary_content %}
+    <!--Carousel Primario-->
+<div class="top-content">
+    <div id="carouselFeatures" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselFeatures" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselFeatures" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselFeatures" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'core/img/fire_emblem.jpg' %}" class="d-block w-100" style="width: 1366px; height:400px;" alt="Fire_Emblem">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/tiny_tina.png' %}" class="d-block w-100" style="width: 1366px; height:400px;" alt="tiny_tina">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/pokemon_escarlata.jpg' %}" class="d-block w-100" style="width: 1366px; height:400px;" alt="pokemon_escarlata">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeatures" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselFeatures" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+{% endblock %}
+
+{% block secondary_content %}
+<!--Seccion Consolas y accesorios-->
+<section>
+<div class="container text-center text-black-50 py-5 mt-4 mb-4">
+    <h1 class="lines-effect">CONSOLAS Y ACCESORIOS</h1>
+    <div class="container mt-4 mb-4">
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'core/img/consola1.jpg' %}" class="rounded float-left" alt="ps5_home">
+                </a>
+              </div>
+              <div class="col">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'core/img/consola2.jpg' %}" class="rounded float-right" alt="switch_home">
+                </a>
+              </div>
+              <div class="col">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'core/img/consola3.jpg' %}" class="rounded mx-auto d-block" alt="pc_home">
+                </a>
+              </div>
+            </div>
+          </div>    
+        </div>
+
+</div>
+</section>
+<section>
+    <!--Carousel Secundario-->
+<div class="top-content">
+    <div id="carouselFeatures" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'core/img/figuras.jpg' %}" class="d-block w-100" style="width: 1366px; height:400px;" alt="figuras">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/onepiece.jpg' %}" class="d-block w-100" style="width: 1366px; height:400px;" alt="onepiece">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/dragonball.jpg' %}" class="d-block w-100" style="width: 1366px; height:400px;" alt="dragonball">
+            </div>
+        </div>
+</div>
+</section>
+<!--Seccion proximos lanzamientos-->
+<section>
+    <div class="container text-center text-black-50 py-5 mt-4 mb-4">
+        <h1 class="lines-effect">PROXIMOS LANZAMIENTOS</h1>
+        <div class="container mt-5 mb-5">
+            <div class="container">
+                <div class="row row-cols-8">
+                  <div class="col p-2">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'core/img/forspoken.png' %}" class="rounded" alt="switch_home">
+                    </a>
+                  </div>
+                  <div class="col p-2">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'core/img/LIVEALIVE.jpg' %}" class="rounded" alt="switch_home">
+                    </a>
+                  </div>
+                  <div class="col p-2">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'core/img/marvel-midnight-suns.jpg' %}" class="rounded" alt="switch_home">
+                    </a>
+                  </div>
+                  <div class="col p-2">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'core/img/RABBIDS.jpg' %}" class="rounded" alt="switch_home">
+                    </a>
+                  </div>
+                  <div class="col p-2">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'core/img/REQUIEM.jpg' %}" class="rounded" alt="switch_home">
+                    </a>
+                  </div>
+                  <div class="col p-2">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'core/img/SAINTSROW.png' %}" class="rounded" alt="switch_home">
+                    </a>
+                  </div>
+                  <div class="col p-2">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'core/img/splatoon-3.jpg' %}" class="rounded" alt="switch_home">
+                    </a>
+                  </div>
+                  <div class="col p-2">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'core/img/TLOU1PS5.jpg' %}" class="rounded" alt="switch_home">
+                    </a>
+                  </div>
+                </div>
+              </div>
+    
+    </div>
+    </section>
+{% endblock %}
