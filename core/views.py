@@ -7,8 +7,8 @@ from crud.models import Producto
 def home(request):
     return render(request, "core/home.html")
 
-def contacto(request):
-    return render(request, "core/contacto.html")
+def nosotros(request):
+    return render(request, "core/nosotros.html")
 
 def playstation(request):
     context = {'productos':Producto.objects.filter(marca=1)}
